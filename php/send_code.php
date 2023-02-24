@@ -19,10 +19,9 @@ function sendEmail($receiver, $company)
     $mail->SMTPDebug = false;
     $companyName = $company;
     // if (isset($_SESSION['name']) && isset($_SESSION['phone'])) {
-        
 
     $senderName = "Kartikeya Saini";    // Your name to be displayed in the email.
-    $senderPhone = "63600 06359";       // Your phone number to be displayed in the email.
+    $senderPhone = "";       // Your phone number to be displayed in the email.
 
 
 
