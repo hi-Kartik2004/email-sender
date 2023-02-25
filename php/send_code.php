@@ -19,10 +19,16 @@ function sendEmail($receiver, $company)
     $mail->SMTPDebug = false;
     $companyName = $company;
     // if (isset($_SESSION['name']) && isset($_SESSION['phone'])) {
-
-    $senderName = "Kartikeya Saini";    // Your name to be displayed in the email.
-    $senderPhone = "";       // Your phone number to be displayed in the email.
-
+    if (isset($_SESSION['senderName'])  && isset($_SESSION['senderPhone'])  && isset($_SESSION['senderEmail'])  && isset($_SESSION['senderPassword'])) {
+        $senderName = $_SESSION['senderName'];    // Your name to be displayed in the email.
+        $senderPhone = $_SESSION['senderPhone'];       // Your phone number to be displayed in the email.
+        $senderPassword = $_SESSION['senderPassword'];
+        $senderEmail = $_SESSION['senderEmail'];
+    } else {
+        echo "Something went wrong";
+        exit();
+        die();
+    }
 
 
     // } else {
@@ -36,20 +42,20 @@ function sendEmail($receiver, $company)
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';        //gmail             //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = '';      //Gmail userid              //SMTP username
-        $mail->Password   = '';                               //SMTP password
+        $mail->Username   = $senderEmail;      //Gmail userid              //SMTP username
+        $mail->Password   = $senderPassword;                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('', 'IEEE UVCE');
+        $mail->setFrom($senderEmail, 'IEEE UVCE');
         // $mail->addAddress('kud', 'Joe User');     //Add a recipient
         $mail->addAddress($receiver);               //Name is optional
-        $mail->addBCC("mohithvarmavs@ieee.org", "Mohith");
-        $mail->addBCC("Kruthin@ieee.org", "Kruthin");
-        $mail->addBCC("kavyabhat@ieee.org", "Kavya");
-        $mail->addBCC("nilkantgunjote@ieee.org", "Nilkant");
-        $mail->addBCC("manjeshpatil18@ieee.org", "Manjesh Patil");
+        // $mail->addBCC("mohithvarmavs@ieee.org", "Mohith");
+        // $mail->addBCC("Kruthin@ieee.org", "Kruthin");
+        // $mail->addBCC("kavyabhat@ieee.org", "Kavya");
+        // $mail->addBCC("nilkantgunjote@ieee.org", "Nilkant");
+        // $mail->addBCC("manjeshpatil18@ieee.org", "Manjesh Patil");
         // $mail->addBCC("bccaddress@ccdomain.com", "Some BCC Name");
 
         //Attachments
