@@ -56,9 +56,10 @@ Change the following variables / fields in php/send_code.php file
 ![image](https://user-images.githubusercontent.com/111000515/221352275-165c29fc-e5f2-42e4-a0b7-45ef57c39d5d.png)
 
 ## After the mail is sent
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://user-images.githubusercontent.com/111000515/221352534-e6379a59-3a6b-479a-9248-9601e5b46f46.png)
 
 ## Mail is received
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://user-images.githubusercontent.com/111000515/221352441-704aec69-10ad-4062-9cf0-7c562fb905de.png)
+
 
 
