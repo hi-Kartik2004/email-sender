@@ -1,4 +1,4 @@
-# email-sender
+# Email-sender
 Live site at: https://ieee-email-sender.000webhostapp.com
 
 ## Installation
