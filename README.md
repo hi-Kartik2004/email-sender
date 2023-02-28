@@ -1,6 +1,6 @@
 # Email-sender
 Cold email sender, which sends cold email for sponsorships, with attachment brochure and company name as a variable.
-You can configure you email id to send emails from your gmail `without the need to` `copy paste email content`, `bold some portions`, `attach the attachment brochure everytime`, `add bccs` and `change the company name` everytime you are mailing a company.
+You can configure your email id to send emails `without the need to` `copy paste email content`, `bold some portions`, `attach the attachment brochure everytime`, `add bccs` and `change the company name` everytime you are mailing a company.
 
 `Duration to send cold emails reduced by about 400%`
 Live site at: https://ieee-email-sender.000webhostapp.com
